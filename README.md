@@ -8,5 +8,5 @@ The repository is divided into multiple exercises, each one focuses on a specifi
 This exercise describes how to use the command-line interface (CLI) provided by Hadoop to add, delete, modify, and query HDFS data and files.
 ### HDFS File Write
 Use Python to upload data to a specified HDFS. 
-### HDFS File Write
+### HDFS File Read
 Use Python to read data from specified HDFS. 
