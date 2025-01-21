@@ -5,7 +5,6 @@ This exercise describes how to use Python to read a specified HDFS file.
 ![alt text](images/image.png)
 
 ## Prerequisites: Log in to HUAWEI CLOUD.
-
 ![alt text](images/image-1.png)
 
 ## 1 Presetting the Lab EnvironmentPrerequisites: Click Preset Lab Environment on the top of the sandbox.
