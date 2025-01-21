@@ -99,13 +99,16 @@ Upload the user_tag_value file to the /exp3 directory of HDFS.
 
 In the current Xfce terminal window, ensure that the current user is root, and run the following commands to use the Vim text editor to create the read_file.py file in the /root directory:
 
-```vim read_file.py```
+```
+vim read_file.py
+```
+>[!CAUTION]
+>This code reads and displays the first five lines of the /exp3/user_tag_value file in HDFS. 192.168.0.196 indicates the internal IP address of the ECS,
+>It should be changed to your the internal IP address of the ECS
+
 Code of read_file.py
 ```
 import pyhdfs
->![CAUTION]
->This code reads and displays the first five lines of the /exp3/user_tag_value file in HDFS. 192.168.0.196 indicates the internal IP address of the ECS 
-
 if __name__=="__main__":
         fs=pyhdfs.HdfsClient(hosts="192.168.0.196:9870",user_name="zker")
         lineindex=5
