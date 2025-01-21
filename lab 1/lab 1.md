@@ -36,25 +36,25 @@ Switch to user zker.
 ![alt text](image-9.png)
 
 Run the following command to start Hadoop:
-"""
+```
 start-all.sh
-"""
+```
 ![alt text](image-10.png)
 
 
 Check all the process running well
-"""
+```
 jps
-"""
+```
 ![alt text](image-11.png)
 
 ### 3.3 Creating a directory for storing data in HDFS
 In the current Xfce terminal window, ensure that the current user is zker and run the following commands to create a directory:
 
-"""
+```
 hdfs dfs -mkdir /exp1
 hdfs dfs -mkdir /exp1/text1
-"""
+```
 
 ### 3.4 Downloading test data from OBS to a local host
 The download URL of the test data is as follows:
@@ -77,81 +77,81 @@ Move the two files to the /home/zker directory.
 ![alt text](image-15.png)
 
 Switch to user zker, Upload these files to a specified HDFS directory
-"""
+```
 su - zker
 hdfs dfs -put /home/zker/score /exp1
 hdfs dfs -put /home/zker/user_tag_value /exp1/text1
 hdfs dfs -cat /exp1/score | head -10 |tee /home/zker/result.txt
 
-"""
+```
 ![alt text](image-16.png)
 
 2)hdfs dfs -cat /exp1/text1/user_tag_value |head -10|tee /home/zker/result2.txt
 
 ### 3.7 Querying files:
 check the files in the /exp1 directory and its subdirectories in HDFS as user zker.
-"""
+```
 hdfs dfs -ls /exp1
-"""
+```
 ![alt text](image-17.png)
 
 Recursively view all files in the /exp1 directory (-R is a recursive command).
-"""
+```
 hdfs dfs -ls -R /exp1
-"""
+```
 ![alt text](image-18.png)
 
 Run the cat command to view the first 10 lines of the file.
-"""
+```
 hdfs dfs -cat /exp1/score |head -10
-"""
+```
 ![alt text](image-19.png)
 
 Download the score file from the exp1 directory to the local host.
-"""
+```
 hdfs dfs -get /exp1/score /home/zker/score_1
-"""
+```
 ![alt text](image-20.png)
 
-"""
+```
 hdfs dfs -cat /exp1/score | tail -10 |tee /home/zker/result3.txt
-"""
+```
 ![alt text](image-21.png)
 
 ### 3.8 Deleting files
 1)Run the following commands to delete the score file from the exp1 directory:
-"""
+```
 hdfs dfs -rm /exp1/score
 hdfs dfs -ls /exp1|tee /home/zker/result8.txt
 
-"""
+```
 ![alt text](image-22.png)
 
 2)Recursively delete all files in the /exp1/text2 directory.
-"""
+```
 hdfs dfs -mkdir /exp1/text2
 hdfs dfs -ls -R /exp1
 hdfs dfs -rm -R /exp1/text2
 hdfs dfs -ls -R /exp1
-"""
+```
 ![alt text](image-23.png)
 
 ### 3.9 Moving files
 
 Copy the user_tag_value file in the exp1/text1 directory to the exp1 directory.
 
-"""
+```
 hdfs dfs -cp /exp1/text1/user_tag_value /exp1
-"""
+```
 ![alt text](image-24.png)
 
 Move the user_tag_value file from the exp1 directory to the exp1/text2 directory.
 
 Because the text2 folder has been deleted, create folder text2, move the user_tag_value file to the text2 folder.
-"""
+```
 hdfs dfs -mkdir /exp1/text2
 hdfs dfs -mv /exp1/user_tag_value /exp1/text2
 hdfs dfs -ls -R /exp1
 
-"""
+```
 ![alt text](image-25.png)
