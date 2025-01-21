@@ -106,6 +106,10 @@ if __name__=="__main__":
  fs.append("/exp3/moc_course",content)
 
 ```
+>[!CAUTION]
+>This code reads and displays the first five lines of the /exp3/user_tag_value file in HDFS. 192.168.0.196 indicates the internal IP address of the ECS,
+>It should be changed to your the internal IP address of the ECS
+
 ![alt text](images/image-19.png)
 
 ### 2.8 Executing the Python code and viewing the
