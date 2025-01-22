@@ -130,7 +130,7 @@ wget http://dl.cpp.la/Archive/hbase-thrift-0.20.4.patch.tgz
 ```
 ![alt text](images/image-19.png)
 
->![CAUTION]
+>[!CAUTION]
 >If did not downloaded the file add ```--no-check-certificate ``` at the  end of the command.
 
 ![alt text](images/image-20.png)
