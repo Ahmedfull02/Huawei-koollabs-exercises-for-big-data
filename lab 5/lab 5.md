@@ -22,7 +22,6 @@ Click Preset Lab.
 ssh root@EIP
 ```
 
-
 ### c- Replace EIP in the command with the one obtained in the previous step.
 ### d- Press Enter and obtain the password of user root. The following figure shows how to obtain the password.
 ### e- Paste the obtained password to the position shown in the following figure and press Enter to log in to the ECS.
