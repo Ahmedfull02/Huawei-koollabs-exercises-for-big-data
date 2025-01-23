@@ -2,7 +2,8 @@
 ## 1.1 Prerequisites: Logging In to Huawei Cloud
 Enter the exercise operation interface, open the browser, and go to the Huawei Cloud login page. Click IAM User. Then, use the account assigned to you to log in to Huawei Cloud.
 ![alt text](images/image.png)
-Note: Use the login credentials provided by the exercise tutorial. Do not use your own account credentials.
+>[!Note]
+>Use the login credentials provided by the exercise tutorial. Do not use your own account credentials.
 1.2 Presetting the Lab Environment
 Click Preset Lab.
 ![alt text](images/image-1.png)
@@ -27,7 +28,8 @@ ssh root@EIP
 
 ### e- Paste the obtained password to the position shown in the following figure and press Enter to log in to the ECS.
 
-Note: If this is your first time logging in to the ECS, a message is displayed after you press Enter. Enter yes and press Enter again.
+>[!Note] 
+>If this is your first time logging in to the ECS, a message is displayed after you press Enter. Enter yes and press Enter again.
 
 
 You have logged in to the ECS using SSH.
