@@ -1,11 +1,14 @@
 # 1 Configuring the Lab Environment
 ## 1.1 Prerequisites: Logging In to Huawei Cloud
 Enter the exercise operation interface, open the browser, and go to the Huawei Cloud login page. Click IAM User. Then, use the account assigned to you to log in to Huawei Cloud.
+
 ![alt text](images/image.png)
+
 >[!Note]
 >Use the login credentials provided by the exercise tutorial. Do not use your own account credentials.
-1.2 Presetting the Lab Environment
+## 1.2 Presetting the Lab Environment
 Click Preset Lab.
+
 ![alt text](images/image-1.png)
 
 # 2 Procedure
@@ -18,19 +21,16 @@ Click Preset Lab.
 ```                             
 ssh root@EIP
 ```
-![alt text](images/image-2.png)
+
 
 ### c- Replace EIP in the command with the one obtained in the previous step.
-
-
 ### d- Press Enter and obtain the password of user root. The following figure shows how to obtain the password.
-
-
 ### e- Paste the obtained password to the position shown in the following figure and press Enter to log in to the ECS.
+
+![alt text](images/image-2.png)
 
 >[!Note] 
 >If this is your first time logging in to the ECS, a message is displayed after you press Enter. Enter yes and press Enter again.
-
 
 You have logged in to the ECS using SSH.
 
@@ -40,6 +40,7 @@ You have logged in to the ECS using SSH.
 ```                              
 su - zker
 ```
+
 ![alt text](images/image-3.png)                      
 
 ### b- Run the following command to start Hadoop:
@@ -49,6 +50,7 @@ start-all.sh
 ```
                             
 The command output is as follows.
+
 ![alt text](images/image-4.png)
 
 ### c- Run the following command to check whether the Hadoop is started successfully:
@@ -68,6 +70,7 @@ Run the following command to create a directory:
 ```
 hdfs dfs -mkdir /exp14
 ```
+
 ![alt text](images/image-6.png)
 
 ### 2.4 Installing required modules
@@ -80,10 +83,10 @@ Log in to the ECS in the Xfce terminal window, switch to user root, and perform 
 su - root
 ```
 Enter the password (masked by default) and press Enter. If the command output shown in the following figure is displayed, you have logged in to the ECS as user root.
+
 ![alt text](images/image-7.png)
 
 #### b- Run the following command to install the pyhdfs module:
-
 ```                            
 pip3 install pyhdfs
 ```
@@ -97,11 +100,13 @@ Now you have completed the installation of the pyhdfs module.
 ```                              
 wget https://koolabsfiles.obs.ap-southeast-3.myhuaweicloud.com/bigdata/exp14.txt
 ```
+
 ![alt text](images/image-9.png)
                             
 ### b- Run the following command to view the file:                      
 
 ``` ls ```
+
 ![alt text](images/image-10.png)
 
 #### c- Run the following command to change the owner and user group of the exp14.txt file (under the /root directory) to zker:
@@ -117,6 +122,7 @@ The command output is as follows.
 mv exp14.txt /home/zker/
 ```                         
 The command output is as follows.
+
 ![alt text](images/image-12.png)
 
 ### e- Switch to the zker user and run the following commands to upload the exp14.txt file to the /exp14 directory in the HDFS:
@@ -156,7 +162,6 @@ for data in sys.stdin:
         # Output information for other areas
         else: print("%d%s\t%s" % (0,record[1], courseID))
 ```
-                            
 
 Press Esc and enter :wq to save modifications and exit the editing mode.
 
@@ -209,6 +214,7 @@ if lastKey:
 ```
                             
 Press Esc and enter :wq to save modifications and exit the editing mode.
+
 ![alt text](images/image-15.png)
 
 >[!NOTE]
@@ -230,6 +236,7 @@ The command output is as follows.
 ![alt text](images/image-16.png)
 
 ![alt text](images/image-17.png)
+
 ### b- Check the execution result in the HDFS. The execution result has been exported to the part-00000 file, as shown in the following figure.
 
 ```                            
