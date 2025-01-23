@@ -58,6 +58,7 @@ The command output is as follows.
 ```                          
 jps
 ```
+
 ![alt text](images/image-5.png)
                             
 If the process is started, there are five processes in the command output as shown in the following figure.
@@ -115,6 +116,7 @@ wget https://koolabsfiles.obs.ap-southeast-3.myhuaweicloud.com/bigdata/exp14.txt
 chown zker:zker exp14.txt
 ```                         
 The command output is as follows.
+
 ![alt text](images/image-11.png)
 
 ### d- Run the following command to move the files to the /home/zker directory:
