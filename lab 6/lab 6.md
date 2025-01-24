@@ -229,5 +229,3 @@ Run the following command to check the average value of the file content:
 hdfs dfs -cat /exp13/out13/part-* | tee checktest.txt
 ```
 
->[!Note]
->Now, all steps of this lab are completed.
