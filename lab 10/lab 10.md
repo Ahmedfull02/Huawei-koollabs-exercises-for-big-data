@@ -328,7 +328,7 @@ select * from moc_score limit 20;
 ![alt text](images/image-23.png)
 
 
-**a） Query the score of the user whose userid is 1442 in the moc_score table.**
+**a）Query the score of the user whose userid is 1442 in the moc_score table.**
 
 ```
 select * from moc_score where userid='1442';
